@@ -9,4 +9,12 @@ The goal is to get a gopigo car to detect lanes provided by the raspberry pi cam
 
 **The workthrough is the following:**
 
-A possibly distorted input image is provided by the raspberry pi camera. With the file camcalib.py the input image is getting undistorted 
+- A possibly distorted input image is provided by the raspberry pi camera. With the file camcalib.py the input image is getting undistorted.
+
+- After that the region of intested is being set. A lot of different lane detection projects use a trapezoid for the ROI, but this wasn't possible for this project since in turns the inner lane disappears and I need a the information that I get.
+
+- The image process contains of canny edge detection and a threshold image. The combination of both is the combo_image and is used to warp the image.
+
+-
+
+To be continued!
