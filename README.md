@@ -17,7 +17,7 @@ The goal is to get a gopigo car to detect lanes provided by the raspberry pi cam
 - After that the region of intested is being set. A lot of different lane detection projects use a trapezoid for the ROI, but this wasn't possible for this project since in turns the inner lane disappears and I need a the information that I get. ROI also helps with the computing power needed -> smaller images, faster computation 
 <img src="https://user-images.githubusercontent.com/97686850/149367619-9e2eb325-7e0d-4078-a348-19fb4a7a3da3.jpg" alt="cropped image" width="300"/>
 
-- The image process contains of canny edge detection and a threshold image. The combination of both is the combo_image and is used to warp the image.
+- The image process contains of canny edge detection and a threshold image. The combination of both is the combo_image and is used to warp the image. To visualize the lanes a hough transformation is used (right image)
 
 <img src="https://user-images.githubusercontent.com/97686850/149367792-cda61e7b-4936-4127-b4db-3dbbff61aa8d.jpg" alt="canny image" width="200"/> <img src="https://user-images.githubusercontent.com/97686850/149367802-acd41c62-ab5b-4ef6-b19a-96919d7a5c5a.jpg" alt="theshold image" width="200"/> <img src="https://user-images.githubusercontent.com/97686850/149367814-31b56f55-e27b-45e8-bb73-7287b5a66472.jpg" alt="combo image" width="200"/> <img src="https://user-images.githubusercontent.com/97686850/149368778-b2768c91-5587-4a13-a646-9e840f66b7c7.jpg" alt="combo image" width="200"/>
 - The warping of the image into a birdeye-view provids an optimal image perspective to extract the lane information especially in curved lanes.
@@ -40,6 +40,6 @@ The goal is to get a gopigo car to detect lanes provided by the raspberry pi cam
 - Meassure the distance to the object and the width of the object and correct the variables KNOWN_DISTANCE and KNOWN_WIDTH
 - Adjust the wanted distance before stopping
 - After that drive onto the object and hope that all goes to play and nothing get's smashed :)
- <img src="https://user-images.githubusercontent.com/97686850/149367440-03f757f5-0dde-49cd-9933-1abdf363bb12.jpg" alt="Obstacle" width="300"/> <img src="https://user-images.githubusercontent.com/97686850/149367499-2358dfd0-1710-4919-a26a-9a9ba0cfb66c.jpg" alt="Obstacle" width="300"/>
+<img src="https://user-images.githubusercontent.com/97686850/149367499-2358dfd0-1710-4919-a26a-9a9ba0cfb66c.jpg" alt="Obstacle" width="300"/>  <img src="https://user-images.githubusercontent.com/97686850/149367440-03f757f5-0dde-49cd-9933-1abdf363bb12.jpg" alt="Obstacle" width="300"/>
 
 
